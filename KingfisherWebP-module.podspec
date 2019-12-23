@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name             = 'KingfisherWebP'
-  s.version          = '0.4.2'
+  s.name             = 'KingfisherWebP-module'
+  s.version          = '0.4.3'
   s.summary          = 'A Kingfisher extension helping you process webp format'
 
   s.description      = <<-DESC
@@ -11,7 +11,7 @@ KingfisherWebP is an extension of the popular library [Kingfisher](https://githu
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Yang Chao' => 'iyeatse@gmail.com' }
-  s.source           = { :git => 'https://github.com/yeatse/KingfisherWebP.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/SvenFang/KingfisherWebP.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/yeatse'
 
   s.ios.deployment_target = '8.0'
@@ -25,7 +25,8 @@ KingfisherWebP is an extension of the popular library [Kingfisher](https://githu
   s.module_map = 'KingfisherWebP/KingfisherWebP.modulemap'
 
   s.xcconfig = {
-    'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
+    'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src',
+    "DEFINES_MODULE" => "YES"
   }
   s.tvos.xcconfig = {
     'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
